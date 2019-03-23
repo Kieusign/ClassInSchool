@@ -1,0 +1,20 @@
+//code Kotlin bai exercise 1
+var ADN = mutableSetOf("G", "C", "T", "A")
+fun ADNchain(){   
+       for (element in ADN){
+           when (element){
+               "G"-> print (" C")
+               "C" -> print (" G")
+               "T"-> print (" A")
+               "A" ->print ( " T")
+           }
+          
+       }
+}
+fun main(){
+    print ("ADN chain is: ")
+    println(ADN)
+    print ("ARN chain is: ")
+    ADNchain()
+    
+}

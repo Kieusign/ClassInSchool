@@ -1,0 +1,10 @@
+//exercise 2
+  
+  var Chain = "Dang Thi Thanh Kieu".split(" ")
+fun main(){
+    println (Chain)
+    for (x in Chain){
+      val First = x.first()
+      print(First)
+   }
+}

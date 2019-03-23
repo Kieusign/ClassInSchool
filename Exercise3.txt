@@ -1,0 +1,24 @@
+//exercise 3
+fun CheckNumber (numbers: Int){
+   
+    if ((numbers%3!=0)&&(numbers%5!=0)&&(numbers%7!=0))
+    {
+        print(numbers)
+    }
+      for (i in 1..numbers){
+   if ((numbers%i==0)&&(i in 3..7 step 2)){
+       when (i){
+           3->print("Pling")
+            5->print("Plang")
+             7->print("Plong")
+       }
+   }
+    
+    }
+}
+
+fun main(){
+    CheckNumber(15)
+}
+
+
