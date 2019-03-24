@@ -1,4 +1,4 @@
-
+//-------a first way -----------------
 fun ADNchain(ADN: String){   
        for (element in ADN){
            when (element){
@@ -15,3 +15,16 @@ fun main(){
     ADNchain("GCTAAGTA")
     
 }
+//-----------end------------------------
+//--------a second way------------------
+    fun ADNChain(input: String): String {
+         val dnaToRna = mapOf('C' to 'G', 'G' to 'C', 'T' to 'A', 'A' to 'U')
+         val ARN = input.map { dnaToRna[it] }.joinToString(separator = "")//create a String from all element
+        return ARN
+    }
+
+fun main(){
+    print (ADNChain("GCTATCA"))
+}
+
+//-----------end------------------------

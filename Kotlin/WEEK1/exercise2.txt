@@ -1,4 +1,5 @@
 //exercise 2
+//---------------not return-------------
   fun Acronym (Chain: String){
       var Acronym = Chain.split(" ")
       for (x in Acronym){
@@ -11,3 +12,20 @@
 fun main(){
     Acronym("Dang Thi Thanh Kieu")
 }
+//----------------end---------------------
+//----------------return------------------
+//exercise 2
+var result = " "
+  fun Acronym (Chain: String): String{
+      var Acronym = Chain.split(" ")
+      for (x in Acronym){
+     result  += x.take(1).toUpperCase()
+      
+  }
+    return result
+  }
+  
+fun main(){
+   print( Acronym("Dang Thi Thanh Kieu"))
+}
+//--------------------end-------------------

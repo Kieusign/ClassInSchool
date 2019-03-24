@@ -1,4 +1,5 @@
 //exercise 3
+//--------------not return----------------------------------------
 fun CheckNumber (numbers: Int){
    
     if ((numbers%3!=0)&&(numbers%5!=0)&&(numbers%7!=0))
@@ -21,5 +22,29 @@ fun CheckNumber (numbers: Int){
 fun main(){
     CheckNumber(34)
 }
+//---------------------end---------------------------------------
+//---------------------update return-------------------------------
+//exercise 3
 
+fun CheckNumber (numbers: Int):String {
+   
+    if ((numbers%3!=0)&&(numbers%5!=0)&&(numbers%7!=0))
+    {
+      
+        return numbers.toString()
+    }
+      for (i in 1..numbers){
+  
+       val output = setOf(3 to "Pling",5 to "Plang",7 to "Plong").filter{ numbers % it.first==0}.joinToString(""){ it.second }
+          return output
+       
+   }
+    
+    
+   return numbers.toString()
+}
 
+fun main(){
+   print( CheckNumber(35))
+}
+//------------------end------------------------------------------
