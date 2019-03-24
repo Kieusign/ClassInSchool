@@ -4,6 +4,7 @@ fun CheckNumber (numbers: Int){
     if ((numbers%3!=0)&&(numbers%5!=0)&&(numbers%7!=0))
     {
         print(numbers)
+        return
     }
       for (i in 1..numbers){
    if ((numbers%i==0)&&(i in 3..7 step 2)){
@@ -18,7 +19,7 @@ fun CheckNumber (numbers: Int){
 }
 
 fun main(){
-    CheckNumber(15)
+    CheckNumber(34)
 }
 
 

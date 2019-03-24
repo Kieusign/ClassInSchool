@@ -1,0 +1,13 @@
+//exercise 2
+  fun Acronym (Chain: String){
+      var Acronym = Chain.split(" ")
+      for (x in Acronym){
+      val First = x.first()
+        print (First)
+  }
+    
+  }
+  
+fun main(){
+    Acronym("Dang Thi Thanh Kieu")
+}

@@ -1,0 +1,17 @@
+
+fun ADNchain(ADN: String){   
+       for (element in ADN){
+           when (element){
+               'G'-> print (" C")
+               'C' -> print (" G")
+               'T'-> print (" A")
+               'A' ->print ( " T")
+           }
+          
+       }
+}
+fun main(){
+    print ("ARN chain is: ")
+    ADNchain("GCTAAGTA")
+    
+}
