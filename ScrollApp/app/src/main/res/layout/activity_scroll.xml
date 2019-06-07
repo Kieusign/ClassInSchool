@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ScrollActivity">
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/icon_rec_red"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="0dp"
+            android:layout_alignParentStart="true" android:layout_marginStart="0dp"/>
+    <ImageView
+            android:layout_width="62dp"
+            android:layout_height="32dp"
+            android:src="@drawable/icon_menu"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentStart="true" android:layout_marginStart="8dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MENU"
+            android:textSize="20dp"
+            android:textColor="#f8f8ff"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentStart="true" android:layout_marginStart="65dp"/>
+
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <android.support.v7.widget.CardView
+
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card_view"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="330dp"
+                    android:layout_height="335dp"
+                    android:layout_alignParentEnd="true" android:layout_alignParentTop="true"
+                    android:layout_marginEnd="27dp" android:layout_marginTop="109dp">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="My Icons"
+                        android:textSize="20dp"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                />
+                <ImageView
+                        android:layout_width="81dp"
+                        android:layout_height="9dp"
+                        android:src="@drawable/rec_pink_ps6"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="50dp"
+                />
+                <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/icon_art"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="90dp"
+                />
+                <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="63dp"
+                        android:src="@drawable/icon_camera"
+                        android:layout_marginLeft="90dp"
+                        android:layout_marginTop="90dp"
+                />
+                <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="63dp"
+                        android:src="@drawable/icon_plugin"
+                        android:layout_marginLeft="170dp"
+                        android:layout_marginTop="90dp"
+                />
+                <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="63dp"
+                        android:src="@drawable/icon_game"
+                        android:layout_marginLeft="250dp"
+                        android:layout_marginTop="90dp"
+                />
+                <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="63dp"
+                        android:src="@drawable/icon_notify"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="210dp"
+                />
+                <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="63dp"
+                        android:src="@drawable/icon_shop"
+                        android:layout_marginLeft="90dp"
+                        android:layout_marginTop="210dp"
+                />
+                <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="63dp"
+                        android:src="@drawable/icon_wifi"
+                        android:layout_marginLeft="170dp"
+                        android:layout_marginTop="210dp"
+                />
+                <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="63dp"
+                        android:src="@drawable/icon_clock"
+                        android:layout_marginLeft="250dp"
+                        android:layout_marginTop="210dp"
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Art"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginTop="155dp"
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="App Art"
+                        android:textSize="12dp"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginTop="173dp"
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Camera"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="101dp"
+                        android:layout_marginTop="155dp"
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="App Camera"
+                        android:textSize="12dp"
+                        android:layout_marginLeft="96dp"
+                        android:layout_marginTop="173dp"
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Plugin"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="185dp"
+                        android:layout_marginTop="155dp"
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="App plugin"
+                        android:textSize="12dp"
+                        android:layout_marginLeft="180dp"
+                        android:layout_marginTop="173dp"
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Game"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="267dp"
+                        android:layout_marginTop="155dp"
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="App Game"
+                        android:textSize="12dp"
+                        android:layout_marginLeft="260dp"
+                        android:layout_marginTop="173dp"
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Notify"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginTop="275dp"
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="App Notify"
+                        android:textSize="12dp"
+                        android:layout_marginLeft="22dp"
+                        android:layout_marginTop="293dp"
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Shop"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="108dp"
+                        android:layout_marginTop="275dp"
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="App shop"
+                        android:textSize="12dp"
+                        android:layout_marginLeft="102dp"
+                        android:layout_marginTop="293dp"
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Wifi"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="190dp"
+                        android:layout_marginTop="275dp"
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="App Wifi"
+                        android:textSize="12dp"
+                        android:layout_marginLeft="185dp"
+                        android:layout_marginTop="293dp"
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Clock"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="265dp"
+                        android:layout_marginTop="275dp"
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="App Clock"
+                        android:textSize="12dp"
+                        android:layout_marginLeft="257dp"
+                        android:layout_marginTop="293dp"
+                />
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card_view1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="330dp"
+                    android:layout_height="335dp"
+                    android:layout_alignParentEnd="true" android:layout_alignParentTop="true"
+                    android:layout_marginEnd="27dp" android:layout_marginTop="464dp">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Introduction"
+                        android:textSize="20dp"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                />
+                <ImageView
+                        android:layout_width="81dp"
+                        android:layout_height="9dp"
+                        android:src="@drawable/rec_pink_ps6"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="50dp">
+                </ImageView>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name: Dang Kieu \n Birthday: 15/12/1997 \n This is my first app. I tried my best \n. Thanks for your support. \n You can contact me by gmail or facebook."
+                        android:textSize="20dp"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="70dp"
+                />
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card_view2"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="330dp"
+                    android:layout_height="335dp"
+                    android:layout_alignParentEnd="true" android:layout_alignParentTop="true"
+                    android:layout_marginEnd="27dp" android:layout_marginTop="819dp">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Address"
+                        android:textSize="20dp"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                />
+                <ImageView
+                        android:layout_width="81dp"
+                        android:layout_height="9dp"
+                        android:src="@drawable/rec_pink_ps6"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="50dp">
+                </ImageView>
+                <ImageView
+                        android:layout_width="310dp"
+                        android:layout_height="182dp"
+                        android:src="@drawable/icon_map"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="70dp"
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="261, Hong Bang stress \n 11 village, District 5 \n Ho Chi Minh city"
+                        android:textSize="20dp"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="260dp"
+                        android:layout_alignStart="@+id/card_view2"/>
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
+
+
+
+
+
+
