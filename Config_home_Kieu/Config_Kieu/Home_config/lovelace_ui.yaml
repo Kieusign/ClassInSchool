@@ -1,0 +1,172 @@
+resources:
+  - type: module
+    url: /customcards/custom_ui/aftership-card.js
+  - type: js
+    url: /customcards/custom_ui/bar-card.js?v=1.0.0
+  - type: js
+    url: /customcards/custom_ui/bignumber-card.js?v=1
+  - type: module
+    url: /customcards/custom_ui/button-card.js
+  - type: module
+    url: /customcards/custom_ui/card-modder.js?
+  - type: js
+    url: /customcards/custom_ui/card-tools.js
+  - type: module
+    url: /customcards/custom_ui/circle-sensor-card.js
+  - type: js
+    url: /customcards/custom_ui/clock-card.js
+  - type: module
+    url: /customcards/custom_ui/custom-fan-card.js
+  - type: module
+    url: /customcards/custom_ui/compact-custom-header/compact-custom-header.js
+  - type: module
+    url: /customcards/custom_ui/dark-sky-weather-card.js?
+  - type: js
+    url: /customcards/custom_ui/fold-entity-row.js?track=true
+  - type: js
+    url: /customcards/custom_ui/gap-card.js?track=true
+  - type: module
+    url: /customcards/custom_ui/mini-graph-card-bundle.js
+  - type: module
+    url: /customcards/custom_ui/mini-media-player-bundle.js
+  - type: js
+    url: /customcards/custom_ui/moment.js
+  - type: js
+    url: /customcards/custom_ui/monster-card.js
+  - type: js
+    url: /customcards/custom_ui/slider-entity-row.js
+  - type: module
+    url: /customcards/custom_ui/surveillance-card.js
+  - type: module
+    url: /customcards/custom_ui/text-divider-row.js
+  - type: js
+    url: /customcards/custom_ui/tracker-card.js
+  - type: js
+    url: /customcards/custom_ui/upcoming-media-card.js?v=0.1.2
+  - type: js
+    url: /customcards/custom_ui/vertical-stack-in-card.js?v=0.1.2
+  - type: js
+    url: /customcards/custom_ui/waze-card.js
+title: KieuRy'home
+views:
+  - badges:
+      - sensor.clock
+      - sensor.yr_symbol
+      - sensor.humidity
+      - sensor.temperature
+      - sun.sun
+    cards:
+      - entities:
+          - sensor.washing_power
+          - sensor.washing_voltage
+          - sensor.washing_current
+        show_header_toggle: true
+        title: R21
+        type: entities
+      - entities:
+          - fan.fan_office
+        title: Fan
+        type: entities
+      - entities:
+          - entity: switch.fan
+            icon: 'mdi:desk-lamp'
+            name: Fan
+          - entity: switch.light
+            icon: 'mdi:desk-lamp'
+            name: Light
+          - entity: switch.air_condition
+            icon: 'mdi:desk-lamp'
+            name: Fan_office
+        show_name: true
+        show_state: true
+        title: Switch
+        type: glance
+      - entities:
+          - sensor.temperature
+        title: My Graph
+        type: history-graph
+      - color_thresholds:
+          - color: '#e74c3c'
+            value: 28
+          - color: '#1db954'
+            value: 15
+          - color: '#3498db'
+            value: 0
+        entities:
+          - sensor.humidity
+        font_size: 65
+        height: 46
+        hours_to_show: 168
+        line_width: 2
+        name: Outside
+        points_per_hour: 1
+        show:
+          extrema: true
+          icon: false
+        type: 'custom:mini-graph-card'
+      - cards:
+          - entities:
+              - sensor.humidity
+              - sensor.temperature
+            font_size: 75
+            line_color: pink
+            line_width: 8
+            type: 'custom:mini-graph-card'
+        type: horizontal-stack
+      - entities:
+          - entity: sensor.daily_total
+          - entity: sensor.weekly_total
+          - entity: sensor.monthly_appliance
+          - entity: sensor.washing_on_today
+          - entity: sensor.total_media_cost
+        show_header_toggle: true
+        title: Track Activity Washing Machine
+        type: entities
+    path: default_view
+    title: Home
+  - badges:
+      - sensor.clock
+    cards:
+      - entities:
+          - fan.fan_office
+        title: Fan
+        type: entities
+      - entities:
+          - switch.bedroom_switch
+        title: Switch
+        type: entities
+    icon: 'mdi:home'
+    path: home_view
+    title: home_view
+  - badges: []
+    cards:
+      - entities:
+          - switch.light
+        title: Switch
+        type: entities
+    path: kitchen
+    title: Kitchen
+  - badges:
+      - sensor.temperature
+      - sensor.humidity
+    cards: []
+    icon: 'mdi:account-multiple'
+    path: upstairs
+    title: Climate
+  - badges: []
+    cards:
+      - entities:
+          - switch.fan
+        title: Switch
+        type: entities
+      - entity: weather.dark_sky
+        type: weather-forecast
+      - entities:
+          - sensor.lamp_on_today
+        font_size: 75
+        line_color: pink
+        line_width: 8
+        name: Lamp On Today
+        type: 'custom:mini-graph-card'
+    path: awesome_people
+    title: Awesome People
