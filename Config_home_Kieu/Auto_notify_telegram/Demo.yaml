@@ -1,0 +1,188 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: KieuRy'home
+  # Location required to calculate the time the sun rises and sets
+  latitude: 0
+  longitude: 0
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 0
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: UTC
+  # Customization file
+  # customize: !include customize.yaml
+# Show links to resources in log and frontend
+#introduction:
+
+# Enables the frontend
+frontend:
+  themes:
+   happy:
+    primary-color: pink
+   sad:
+    primary-cokor: black
+# Enables configuration UI
+config:
+
+http:
+  # Secrets are defined in the file secrets.yaml
+  # api_password: !secret http_password
+  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+  # base_url: example.duckdns.org:8123
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+map:
+
+# Track the sun
+sun:
+
+# Weather prediction
+sensor:
+  - platform: yr
+mqtt:
+  broker: localhost
+  password: ThanhkieU1310@@
+# Text to speech
+tts:
+  - platform: google
+sensor:
+  - platform: mqtt
+    command_topic: "office/meeting/temperature"
+    state_topic: "office/meeting/temperature"
+    name: "Temperature"
+    qos: 0
+    unit_of_measurement: "℃"
+    value_template: '{{value_json.temperature}}'
+
+  - platform: mqtt
+    state_topic: "office/meeting/humidity"
+    command_topic: "office/meeting/temperature"
+    name: "Humidity"
+    qos: 0
+    unit_of_measurement: "%"
+    value_template: '{{value_json.humidity}}'
+
+  - platform: worldclock
+    name: "Clock"
+    time_zone: Asia/Ho_Chi_Minh
+
+  - platform: mqtt
+    name: "Washing_Power"
+    state_topic: "homeassistant/energy"
+    command_topic: "homeassistant/energy"
+    value_template: "{{value_json.Power }}"
+    qos: 1
+    unit_of_measurement : "W"  
+
+  - platform: mqtt
+    name: "Washing_Current"
+    state_topic: "homeassistant/current"
+    value_template: "{{value_json.Current }}"
+    qos: 1
+    unit_of_measurement : "A"    
+
+  - platform: mqtt
+    name: "Washing_Voltage"
+    state_topic: "homeassistant/voltage"
+    value_template: "{{value_json.Volatge }}"
+    qos: 1
+    unit_of_measurement : "V" 
+  
+switch:
+  - platform: mqtt
+    name: Light
+    command_topic: "office/Light/switch1/set"
+  - platform: mqtt
+    name: Air_condition
+    command_topic: "office/Air_condition/switch1/set"
+  - platform: mqtt
+    name: Fan
+    command_topic: "office/Fan/switch1/set"
+  - platform: mqtt
+    name: "Bedroom_Switch"
+    state_topic: "home/bedroom/switch1"
+    command_topic: "home/bedroom/switch1/set"
+    payload_on: "ON"
+    payload_off: "OFF"
+    qos: 0
+    retain: true
+fan:
+  - platform: mqtt
+    name: Fan_office
+    qos: 2
+    icon:mdi: home
+    command_topic: "bedroom_fan/on/set"
+    view: yes
+# Cloud
+#cloud:   
+group: !include groups.yaml
+group:
+  R21:
+    entities:
+      - sensor.Washing_Power
+      - sensor.Washing_Voltage
+      - sensor.Washing_Current
+
+  R22:
+    entities:
+      - sensor.Washing_Energy_Today
+      - sensor.Washing_Energy_Yesterday
+  home_view:
+    view: true
+    icon: mdi:home
+    entities:
+      - group.kitchen
+      - group.awesome_people
+      - group.climate
+      - fan.Fan_office
+      - sensor.Clock
+      - switch.Bedroom_Switch
+  kitchen:
+    name: Kitchen
+    view: true
+    entities:
+      - switch.Light
+  upstairs:
+    name: Kids
+    icon: mdi:account-multiple
+    view: true
+    entities:
+      - switch.Air_condition
+    name: Climate
+    view: true
+    entities:
+      - sensor.Temperature
+      - sensor.Humidity
+  awesome_people:
+    name: Awesome People
+    view: true
+    entities:
+       - switch.Fan
+logger:
+ default: info
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+

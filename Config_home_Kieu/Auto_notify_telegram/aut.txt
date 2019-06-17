@@ -1,0 +1,11 @@
+- alias: "temp and humi notify"
+  hide_entity: True
+  trigger: 
+    platform: numeric_state
+    entity_id: sensor.Temp
+    above: 30
+  action: 
+    service: notify.telegram
+    data:
+      message: "Temp over 30"
+      
